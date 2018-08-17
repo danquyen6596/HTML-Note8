@@ -31,6 +31,7 @@
     height: 930px;
     margin: 0px;
     padding: 0px;
+    position: relative;
 }
 
 /*feature-smart-switch2*/
@@ -443,18 +444,54 @@ i{
 
 
 
-.path {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 1000;
-    animation: dash 5s linear alternate infinite;
+#path-plus1 {
+    stroke-dasharray: 608;
+    animation-name: plus1;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
 }
 
-@keyframes dash {
+@keyframes plus1 {
     from {
-        stroke-dashoffset: 100;
+        stroke-dashoffset: 608;
     }
     to {
         stroke-dashoffset: 0;
     }
+}
+
+#path-plus2 {
+    stroke-dasharray: 626;
+    stroke-dashoffset: 626;
+    animation-name: plus2;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: initial;
+    animation-fill-mode: forwards;
+}
+
+@keyframes plus2 {
+    from {
+        stroke-dashoffset: 626;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+
+
+svg {
+    stroke: #000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    left: 16.2%;
+    top: 41%;
 }
 
